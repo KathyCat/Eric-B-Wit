@@ -1,0 +1,6 @@
+DATE = 'date_str'
+TIME = 'time_str'
+DURATION = 'duration'
+CLASS_TYPE = 'classtype'
+WIT_TOKEN = 'VC2B2SMXPIL4X27UHJFANH6IGGJINGI6' 
+ENTITIES = 'entities'
