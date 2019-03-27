@@ -25,8 +25,16 @@ time_point.append(datetime.strptime('8:31pm', datemask))
 now = datetime.strftime(datetime.today(), datemask)
 
 
-#if now >= time_point[1] and now < time_point[2]:
-accept_booking.start_conversation(user_input)
+'''
+ Greet user
+ fetch username from db
+ '''
+username = 'Sarah'
+greet = "Good morning " + username + ", this is Elly, your duty coordinator" 
+print(greet)
+
+# if now >= time_point[1] and now < time_point[2]:
+accept_booking.add_booking(user_input)
 
 '''
 username = 'Sarah'

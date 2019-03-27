@@ -10,14 +10,9 @@ Hi, i would like to book a teacher for {time} on {date} for {class type}
 
 from wit import Wit
 import constant
+import common
 
-def first_entity_value(entities, entity):
-    if entity not in entities:
-        return ''
-    val = entities[entity][0]['value']
-    if not val:
-        return ''
-    return val
+
 
 
 '''
@@ -35,13 +30,8 @@ def handle_message (response, info):
         info[constant.CLASS_TYPE] = first_entity_value(entities, constant.CLASS_TYPE)    
 
 
-def start_conversation (first_input):  
-    # 1 Elly greet user
-    '''
-     fetch username from db
-     '''
-    username = 'Sarah'
-    greet = "Good morning " + username + ", this is Elly, your duty coordinator"  
+def add_booking (first_input):  
+    
     '''
      Setup Wit and information to be stored
      '''
@@ -68,5 +58,11 @@ def start_conversation (first_input):
         handle_message(client.message(user_input) , info)      
  
     
-    # 3 Elly ask for confirmation
-    print ('Thank you for booking ' + info[constant.CLASS_TYPE] +' class at ' + info[constant.TIME] + ' ' + info[constant.DATE])
+    # 3.1 Fetch college name and location from db
+
+        
+    
+    # 3.2 Elly ask for confirmation (include additional info like teacher name)
+    print ('Would you like to book a teacher for ' + info[constant.CLASS_TYPE] +' class at ' + info[constant.TIME] + ' ' + info[constant.DATE] + '?')
+    
+    print ('Thanks! Your booking is on its way to your email inbox.')
