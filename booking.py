@@ -21,17 +21,16 @@ import common
 def handle_message (response, info):
     entities = response[constant.ENTITIES]
     if info[constant.DATE] is '':
-        info[constant.DATE] = first_entity_value(entities, constant.DATE)  
+        info[constant.DATE] = common.first_entity_value(entities, constant.DATE)  
     if info[constant.TIME] is '':
-        info[constant.TIME] = first_entity_value(entities, constant.TIME)
+        info[constant.TIME] = common.first_entity_value(entities, constant.TIME)
     if info[constant.DURATION] is '':
-        info[constant.DURATION] = first_entity_value(entities, constant.DURATION)
+        info[constant.DURATION] = common.first_entity_value(entities, constant.DURATION)
     if info[constant.CLASS_TYPE] is '':
-        info[constant.CLASS_TYPE] = first_entity_value(entities, constant.CLASS_TYPE)    
+        info[constant.CLASS_TYPE] = common.first_entity_value(entities, constant.CLASS_TYPE)    
 
 
-def add_booking (first_input):  
-    
+def add_booking (first_input):    
     '''
      Setup Wit and information to be stored
      '''
@@ -63,6 +62,6 @@ def add_booking (first_input):
         
     
     # 3.2 Elly ask for confirmation (include additional info like teacher name)
-    print ('Would you like to book a teacher for ' + info[constant.CLASS_TYPE] +' class at ' + info[constant.TIME] + ' ' + info[constant.DATE] + '?')
+    print ('So, you would like to book a teacher for ' + info[constant.CLASS_TYPE] +' class at ' + info[constant.TIME] + ' ' + info[constant.DATE] + ', right?')
     
-    print ('Thanks! Your booking is on its way to your email inbox.')
+    #print ('Thanks! Your booking is on its way to your email inbox.')

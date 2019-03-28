@@ -1,6 +1,6 @@
 from datetime import datetime
 
-import accept_booking 
+import booking 
 
 '''
  fetch user input
@@ -33,8 +33,11 @@ username = 'Sarah'
 greet = "Good morning " + username + ", this is Elly, your duty coordinator" 
 print(greet)
 
+'''
+ Decide route
+'''
 # if now >= time_point[1] and now < time_point[2]:
-accept_booking.add_booking(user_input)
+booking.add_booking(user_input)
 
 '''
 username = 'Sarah'
