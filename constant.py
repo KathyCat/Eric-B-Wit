@@ -14,7 +14,8 @@ QUESTIONS = {
     TIME: 'What time does the class start?',       
     DURATION: 'How long will it last?',       
     CLASS_TYPE: 'What is the class level?',       
-    CAMPUS: 'What campus?'
+    CAMPUS: 'What campus?',
+    TEACHER: 'Which teacher?'
 }
 
 
